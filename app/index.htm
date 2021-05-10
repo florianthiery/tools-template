@@ -20,8 +20,10 @@
 			<center><img src="Alligator_16_9.png" height="250"></center>
 			<br><br>
 			<ul class="list-group">
-				<li class="list-group-item">Alligator reads a item name, its XYZ values of a CA, its start and end date and the fact if it is fixed or not, example <a href="https://github.com/dirkseidensticker/ChronoCongo/blob/master/data/roman2.tsv" target="_blank">here</a>. Out of the CA
-					3D data all 3D distances are calculated. For items which are not fixed (schwebend) the "next fixed neighbour" (NFN) for start or end date will be searched. If the NFN is found, the virtual year will be taken. With this result and all new calculated
+				<li class="list-group-item">Alligator reads a item name, its XYZ values of a CA, its start and end date and the fact if it is fixed or not, example <a href="#" target="_blank">here</a>.
+					Out of the CA
+					3D data all 3D distances are calculated. For items which are not fixed (floating) the "next fixed neighbour" (NFN) for start or end date will be searched. If the NFN is found, the virtual year will be taken. With this result and all new
+					calculated
 					"virtual" years, all Allen time intervals will be calculated. As a key feature, this calculation is downloadable als Ressource Description Framework (RDF) file, following the alligator <a href="https://github.com/RGZM/alligator/blob/master/docs/ontology/index.md"
 					    target="_blank">ontology</a>.</li>
 			</ul>
@@ -30,10 +32,9 @@
 			<strong>How To</strong>
 			<br><br>
 			<ul class="list-group">
-				<li class="list-group-item">1. Create a Alligator CA-File, example <a href="https://github.com/dirkseidensticker/ChronoCongo/blob/master/data/roman2.tsv" target="_blank">here</a>.</li>
+				<li class="list-group-item">1. Create a Alligator-File (*.agt), example <a href="#" target="_blank">here</a>.</li>
 				<li class="list-group-item">2. Select the output mode.</li>
-				<li class="list-group-item">3. <i>(optional)</i> set start/end value which means that the value is not fixed.</li>
-				<li class="list-group-item">4. Choose and upload the file.</li>
+				<li class="list-group-item">3. Choose and upload the Alligator-File (*.agt).</li>
 			</ul>
 		</div>
 		<div class="alert alert-danger" style="margin:10px;">
@@ -50,8 +51,8 @@
 		<fieldset>
 			<legend>select the output</legend>
 			<input type="radio" name="alligator" value="matrixdist" class="form-check-input"> show the matrix of 3D distances<br>
-			<input type="radio" name="alligator" value="matrixallen" class="form-check-input" checked> show the matrix of Allen intervals<br>
-			<input type="radio" name="alligator" value="timeline" class="form-check-input"> show a "virtual" timeline<br>
+			<input type="radio" name="alligator" value="matrixallen" class="form-check-input"> show the matrix of Allen intervals<br>
+			<input type="radio" name="alligator" value="timeline" class="form-check-input" checked> show a "virtual" timeline<br>
 			<input type="radio" name="alligator" value="graph" class="form-check-input"> show the Allen interval graph<br>
 			<input type="radio" name="alligator" value="turtlefile" class="form-check-input"> show the Allen RDF Graph<br>
 			<input type="radio" name="alligator" value="turtle" class="form-check-input"> show the Allen RDF file in Turtle representation<br>
@@ -60,7 +61,7 @@
 			<input type="radio" name="alligator" value="amtrepo" class="form-check-input"> show a data in Academic Meta Tool (AMT) web viewer<br>
 		</fieldset>
 		<br>
-		<fieldset>
+		<!--<fieldset>
 			<legend>select date type (if one is empty, not used)</legend>
 			<div class="form-group row">
 				<div class="col-xs-2">
@@ -74,13 +75,14 @@
 					<small id="endfixedhelp" class="form-text text-muted">end year that means not fixed.</small>
 				</div>
 			</div>
-		</fieldset>
+		</fieldset>-->
 		<br>
 		<fieldset>
-			<legend>Upload your CSV File</legend>
-			<input type="file" name="File Upload" id="txtFileUpload" class="form-control-file" accept=".tsv" />
+			<legend>Upload your Alligator-File (*.agt)</legend>
+			<input type="file" name="File Upload" id="txtFileUpload" class="form-control-file" accept=".agt" />
 		</fieldset>
 	</div>
+	<p>&nbsp;</p>
 	<div id="refresh-div" width="100%" class="alert alert-success" style="margin:10px;">
 		<center><button type="button" class="btn btn-success" onClick="location.href=location.href">go back</button></center>
 	</div>

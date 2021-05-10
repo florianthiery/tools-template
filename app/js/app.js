@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    //var API_URL = "http://localhost:8084/alligator/";
+    var API_URL = "http://localhost:8084/alligator/";
     //var API_URL = "http://143.93.114.135/alligator/";
-    var API_URL = "https://java-dev.rgzm.de/alligator/";
+    //var API_URL = "https://java-dev.rgzm.de/alligator/";
 
     // elements
     $("#matrix-div").hide();
@@ -44,7 +44,8 @@ $(document).ready(function() {
                 $.ajax({
                     type: "POST",
                     url: API_URL + selValue + "/",
-                    data: $("#startfixed").val() + "," + $("#endfixed").val() + ";" + csvData,
+                    //data: $("#startfixed").val() + "," + $("#endfixed").val() + ";" + csvData,
+                    data: csvData,
                     contentType: 'text/plain',
                     error: function(jqXHR, textStatus, errorThrown) {
                         alert(errorThrown);
@@ -57,42 +58,6 @@ $(document).ready(function() {
                         $("#legend2-div").show();
                         $("#upload-div").hide();
                         $("#info-div").hide();
-                        if (selValue === "matrixdist") {
-                            var html = "<tr>";
-                            for (var item in response[0]) {
-                                html += "<th>" + response[0][item] + "</th>";
-                            }
-                            response.splice(0, 1);
-                            html += "</tr>";
-                            for (var row in response) {
-                                html += "<tr>";
-                                for (var item in response[row]) {
-                                    html += "<td>" + response[row][item] + "</td>";
-                                }
-                                html += "</tr>";
-                            }
-                            $('#matrixtable').css('width', '100%');
-                            $("#matrixtable").append(html);
-                            $("#matrix-div").show();
-                        }
-                        if (selValue === "matrixallen") {
-                            var html = "<tr>";
-                            for (var item in response[0]) {
-                                html += "<th>" + response[0][item] + "</th>";
-                            }
-                            response.splice(0, 1);
-                            html += "</tr>";
-                            for (var row in response) {
-                                html += "<tr>";
-                                for (var item in response[row]) {
-                                    html += "<td>" + response[row][item] + "</td>";
-                                }
-                                html += "</tr>";
-                            }
-                            $('#matrixtable').css('width', '100%');
-                            $("#matrixtable").append(html);
-                            $("#matrix-div").show();
-                        }
                         if (selValue === "timeline") {
                             // DOM element where the Timeline will be attached
                             var container = document.getElementById('timeline-div');
@@ -104,6 +69,42 @@ $(document).ready(function() {
                             var timeline = new vis.Timeline(container, items, options);
                             $('.vis-time-axis.vis-foreground').hide();
                             $("#timeline-div").show();
+                        }
+                        if (selValue === "matrixdist" || selValue === "timeline") {
+                            var html = "<tr>";
+                            for (var item in response[0]) {
+                                html += "<th>" + response[0][item] + "</th>";
+                            }
+                            response.splice(0, 1);
+                            html += "</tr>";
+                            for (var row in response) {
+                                html += "<tr>";
+                                for (var item in response[row]) {
+                                    html += "<td>" + response[row][item] + "</td>";
+                                }
+                                html += "</tr>";
+                            }
+                            $('#matrixtable').css('width', '100%');
+                            $("#matrixtable").append(html);
+                            $("#matrix-div").show();
+                        }
+                        if (selValue === "matrixallen" || selValue === "timeline") {
+                            var html = "<tr>";
+                            for (var item in response[0]) {
+                                html += "<th>" + response[0][item] + "</th>";
+                            }
+                            response.splice(0, 1);
+                            html += "</tr>";
+                            for (var row in response) {
+                                html += "<tr>";
+                                for (var item in response[row]) {
+                                    html += "<td>" + response[row][item] + "</td>";
+                                }
+                                html += "</tr>";
+                            }
+                            $('#matrixtable').css('width', '100%');
+                            $("#matrixtable").append(html);
+                            $("#matrix-div").show();
                         }
                         if (selValue === "graph") {
                             $('#graph-div').width(1200);
