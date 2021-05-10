@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    var API_URL = "http://localhost:8084/alligator/";
+    //var API_URL = "http://localhost:8084/alligator/";
     //var API_URL = "http://143.93.114.135/alligator/";
-    //var API_URL = "https://java-dev.rgzm.de/alligator/";
+    var API_URL = "https://java-dev.rgzm.de/alligator/";
 
     // elements
     $("#matrix-div").hide();
@@ -70,7 +70,7 @@ $(document).ready(function() {
                             $('.vis-time-axis.vis-foreground').hide();
                             $("#timeline-div").show();
                         }
-                        if (selValue === "matrixdist" || selValue === "timeline") {
+                        if (selValue === "matrixdist") {
                             var html = "<tr>";
                             for (var item in response[0]) {
                                 html += "<th>" + response[0][item] + "</th>";
@@ -88,7 +88,7 @@ $(document).ready(function() {
                             $("#matrixtable").append(html);
                             $("#matrix-div").show();
                         }
-                        if (selValue === "matrixallen" || selValue === "timeline") {
+                        if (selValue === "matrixallen") {
                             var html = "<tr>";
                             for (var item in response[0]) {
                                 html += "<th>" + response[0][item] + "</th>";
@@ -102,9 +102,9 @@ $(document).ready(function() {
                                 }
                                 html += "</tr>";
                             }
-                            $('#matrixtable').css('width', '100%');
-                            $("#matrixtable").append(html);
-                            $("#matrix-div").show();
+                            $('#matrixtable2').css('width', '100%');
+                            $("#matrixtable2").append(html);
+                            $("#matrix-div2").show();
                         }
                         if (selValue === "graph") {
                             $('#graph-div').width(1200);
