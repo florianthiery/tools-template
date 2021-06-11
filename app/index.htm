@@ -9,6 +9,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Alligator - An Allen Transformator</title>
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
+	<style>
+	.alert { background-color: #058b8c !important;}
+	.alert-info { color: #058b8c !important;}
+	fieldset { color: white !important;}
+	strong { color: white !important;}
+	legend { color: white !important;}
+	@font-face {
+		font-family: 'Ubuntu', sans-serif !important;
+		font-weight: 400;
+		font-style: normal;
+	}
+	body {
+		font-family: 'Ubuntu', sans-serif !important;
+	}
+	</style>
 </head>
 
 <body>
@@ -16,20 +32,18 @@
 	<div id="info-div" width="100%">
 		<div class="alert alert-info" style="margin:10px;">
 			<strong>About Alligator</strong>
-			<br><br>
-			<center><img src="Alligator_16_9.png" height="250"></center>
-			<br><br>
+			<center><img src="alligator_logo_white.png" height="250"></center>
 			<ul class="list-group">
 				<li class="list-group-item">Alligator reads a item name, its XYZ values of a CA, its start and end date and the fact if it is fixed or not, example <a href="https://github.com/RGZM/alligator-mt-data/blob/master/alligator_re_ca_results.agt"
 					    target="_blank">here</a>.
 					Out of the CA
 					3D data all 3D distances are calculated. For items which are not fixed (floating) the "next fixed neighbour" (NFN) for start or end date will be searched. If the NFN is found, the virtual year will be taken. With this result and all new
 					calculated
-					"virtual" years, all Allen time intervals will be calculated. As a key feature, this calculation is downloadable als Ressource Description Framework (RDF) file, following the alligator <a href="https://github.com/RGZM/alligator/blob/master/docs/ontology/index.md"
+					"virtual" years, all Allen time intervals will be calculated. As a key feature, this calculation is downloadable als Ressource Description Framework (RDF) file, following the alligator <a href="https://github.com/RGZM/alligator/blob/master/docs/vocab/alligator.rdf"
 					    target="_blank">ontology</a>.</li>
 			</ul>
 		</div>
-		<div class="alert alert-success" style="margin:10px;">
+		<div class="alert alert-info" style="margin:10px;">
 			<strong>How To</strong>
 			<br><br>
 			<ul class="list-group">
@@ -38,50 +52,35 @@
 				<li class="list-group-item">3. Choose and upload the Alligator-File (*.agt).</li>
 			</ul>
 		</div>
-		<div class="alert alert-danger" style="margin:10px;">
+		<div class="alert alert-info" style="margin:10px;">
 			<strong>Credits</strong>
 			<br><br>
 			<ul class="list-group">
-				<li class="list-group-item">Römisch-Germanisches Zentralmuseum - Leibniz Forschungsinstitut für Archäologie</li>
-				<li class="list-group-item">Florian Thiery M.Sc.</li>
-				<li class="list-group-item">Dr. Allard Mees</li>
+				<li class="list-group-item">Florian Thiery M.Sc. [RGZM]</li>
+				<li class="list-group-item">Dr. Allard Mees [RGZM]</li>
+				<li class="list-group-item">RGZM = Römisch-Germanisches Zentralmuseum - Leibniz Forschungsinstitut für Archäologie</li>
 			</ul>
 		</div>
 	</div>
 	<div id="upload-div" width="100%" class="alert alert-info" style="margin:10px;">
 		<fieldset>
-			<legend>select the output</legend>
-			<input type="radio" name="alligator" value="matrixdist" class="form-check-input"> show the matrix of 3D distances<br>
-			<input type="radio" name="alligator" value="matrixallen" class="form-check-input"> show the matrix of Allen intervals<br>
-			<input type="radio" name="alligator" value="timeline" class="form-check-input" checked> show a "virtual" timeline<br>
-			<input type="radio" name="alligator" value="graph" class="form-check-input"> show the Allen interval graph<br>
-			<input type="radio" name="alligator" value="turtlefile" class="form-check-input"> show the Allen RDF Graph<br>
-			<input type="radio" name="alligator" value="turtle" class="form-check-input"> show the Allen RDF file in Turtle representation<br>
-			<input type="radio" name="alligator" value="cypher" class="form-check-input"> show the Allen in a CYPHER representation<br>
-			<input type="radio" name="alligator" value="amt" class="form-check-input"> show a Academic Meta Tool (AMT) RDF file in Turtle representation<br>
-			<input type="radio" name="alligator" value="amtrepo" class="form-check-input"> show a data in Academic Meta Tool (AMT) web viewer<br>
+			<strong>Select the Output</strong>
+			<br><br>
+			<input type="radio" name="alligator" value="matrixdist" class="form-check-input"> show matrix of 3D distances<br>
+			<input type="radio" name="alligator" value="matrixallen" class="form-check-input"> show matrix of Allen intervals<br>
+			<input type="radio" name="alligator" value="timeline" class="form-check-input" checked> show virtual timeline<br>
+			<input type="radio" name="alligator" value="graph" class="form-check-input"> show Allen interval graph<br>
+			<!--<input type="radio" name="alligator" value="turtlefile" class="form-check-input"> show the Allen RDF Graph<br>-->
+			<input type="radio" name="alligator" value="turtle" class="form-check-input"> show Allen TTL file<br>
+			<input type="radio" name="alligator" value="cypher" class="form-check-input"> show Allen CYPHER file<br>
+			<input type="radio" name="alligator" value="amt" class="form-check-input"> show a Academic Meta Tool (AMT) TTL file<br>
+			<!--<input type="radio" name="alligator" value="amtrepo" class="form-check-input"> show a data in Academic Meta Tool (AMT) web viewer<br>-->
 		</fieldset>
-		<br>
-		<!--<fieldset>
-			<legend>select date type (if one is empty, not used)</legend>
-			<div class="form-group row">
-				<div class="col-xs-2">
-					<label for="exampleInputEmail1">start not fixed value</label>
-					<input type="text" class="form-control" id="startfixed" placeholder="20.0">
-					<small id="startfixedhelp" class="form-text text-muted">start year that means not fixed.</small>
-				</div>
-				<div class="col-xs-2">
-					<label for="exampleInputEmail1">end not fixed value</label>
-					<input type="text" class="form-control" id="endfixed" placeholder="130.0">
-					<small id="endfixedhelp" class="form-text text-muted">end year that means not fixed.</small>
-				</div>
-			</div>
-		</fieldset>-->
-		<br>
-		<fieldset>
-			<legend>Upload your Alligator-File (*.agt)</legend>
-			<input type="file" name="File Upload" id="txtFileUpload" class="form-control-file" accept=".agt" />
-		</fieldset>
+	</div>
+	<div id="upload-div" width="100%" class="alert alert-info" style="margin:10px;">
+		<strong>Upload your Alligator-File (*.agt)</strong>
+		<br><br>
+		<input type="file" name="File Upload" id="txtFileUpload" class="form-control-file" accept=".agt" />
 	</div>
 	<p>&nbsp;</p>
 	<div id="refresh-div" width="100%" class="alert alert-success" style="margin:10px;">
