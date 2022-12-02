@@ -71,8 +71,12 @@ $(document).ready(function() {
                             var timeline = new vis.Timeline(container, items, options);
                             $('.vis-time-axis.vis-foreground').hide();
                             $("#timeline-div").show();
+                            $("#legend-div").hide();
+                            $("#legend2-div").show();
                         }
                         if (selValue === "matrixdist") {
+                            $("#legend-div").hide();
+                            $("#legend2-div").hide();
                             var html = "<tr>";
                             for (var item in response[0]) {
                                 html += "<th>" + response[0][item] + "</th>";
@@ -91,6 +95,8 @@ $(document).ready(function() {
                             $("#matrix-div").show();
                         }
                         if (selValue === "matrixallen") {
+                            $("#legend-div").show();
+                            $("#legend2-div").hide();
                             var html = "<tr>";
                             for (var item in response[0]) {
                                 html += "<th>" + response[0][item] + "</th>";
@@ -109,6 +115,8 @@ $(document).ready(function() {
                             $("#matrix-div2").show();
                         }
                         if (selValue === "graph") {
+                            $("#legend-div").show();
+                            $("#legend2-div").hide();
                             $('#graph-div').width(1200);
                             $('#graph-div').height(800);
                             var container = document.getElementById('graph-div');
@@ -121,9 +129,11 @@ $(document).ready(function() {
                             $("#graph-div").show();
                         }
                         if (selValue === "turtle") {
+                            $("#legend-div").hide();
+                            $("#legend2-div").hide();
                             $("#rdffile-div").show();
                             $("#rdffile-div").html("");
-                            $("#rdffile-div").html("<textarea id='rdf' style='width:1px;height:auto'></textarea>");
+                            $("#rdffile-div").html("<textarea id='rdf' style='width:1px;height:auto;'></textarea>");
                             var turtle = CodeMirror.fromTextArea(document.getElementById("rdf"), {
                                 mode: "text/turtle",
                                 matchBrackets: true,
@@ -133,6 +143,8 @@ $(document).ready(function() {
                             turtle.setOption("theme", "darcula");
                         }
                         if (selValue === "cypher") {
+                            $("#legend-div").hide();
+                            $("#legend2-div").hide();
                             $("#cypherfile-div").show();
                             $("#cypherfile-div").html("");
                             $("#cypherfile-div").html("<textarea id='cypher' style='width:1px;height:auto'></textarea>");
@@ -144,6 +156,8 @@ $(document).ready(function() {
                             cypher.setOption("theme", "darcula");
                         }
                         if (selValue === "amt") {
+                            $("#legend-div").hide();
+                            $("#legend2-div").hide();
                             $("#amtfile-div").show();
                             $("#amtfile-div").html("");
                             $("#amtfile-div").html("<textarea id='rdf' style='width:1px;height:auto'></textarea>");
@@ -155,16 +169,16 @@ $(document).ready(function() {
                             turtle.setValue(response);
                             turtle.setOption("theme", "darcula");
                         }
-                        if (selValue === "amtrepo") {
+                        /*if (selValue === "amtrepo") {
                             $("#amtrepo-div").show();
                             $("#amtrepo-div").html("");
                             $("#amtrepo-div").html("<iframe src='amt-time/index.html?repo=" + response + "' width='1200px' height='800px'></iframe>");
-                        }
-                        if (selValue === "turtlefile") {
+                        }*/
+                        /*if (selValue === "turtlefile") {
                             $("#rdf-div").html("");
                             $("#rdf-div").html("<iframe src='http://visualrdf.dernettekleinenerd.de/?url=http://143.93.114.135/alligator-files/" + response + "' width='1200px' height='800px'></iframe>");
                             $("#rdf-div").show();
-                        }
+                        }*/
                         $("#loading").hide();
                     }
                 });
