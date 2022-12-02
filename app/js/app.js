@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-    //var API_URL = "http://localhost:8084/alligator/";
+    var API_URL = "http://localhost:8080/alligator/";
     //var API_URL = "http://143.93.114.135/alligator/";
-    var API_URL = "https://java-dev.rgzm.de/alligator/";
+    //var API_URL = "https://java-dev.rgzm.de/alligator/";
 
     // elements
     $("#matrix-div").hide();
@@ -52,12 +52,14 @@ $(document).ready(function() {
                     },
                     success: function(response) {
                         console.log(response);
+                        $("#info-div-sub2").hide();
+                        $("#upload-div").hide();
+                        $("#upload-div2").hide();
+                        $("#break-div").hide();
                         $("#refresh-div").show();
                         $("#wrapper-div").show();
                         $("#legend-div").show();
                         $("#legend2-div").show();
-                        $("#upload-div").hide();
-                        $("#info-div").hide();
                         if (selValue === "timeline") {
                             // DOM element where the Timeline will be attached
                             var container = document.getElementById('timeline-div');

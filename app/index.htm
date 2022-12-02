@@ -32,7 +32,7 @@
 	<center><h1 style="color:black;">Alligator | An Allen Transformator</h1></center>
 	<br>
 	<div id="info-div" width="100%">
-		<div class="alert alert-info" style="margin:10px;">
+		<div id="info-div-sub1" class="alert alert-info" style="margin:10px;">
 			<strong>About Alligator</strong>
 			<center><img src="alligator_logo_white.png" height="250"></center>
 			<ul class="list-group">
@@ -45,7 +45,7 @@
 					    target="_blank">ontology</a>.</li>
 			</ul>
 		</div>
-		<div class="alert alert-info" style="margin:10px;">
+		<div id="info-div-sub2" class="alert alert-info" style="margin:10px;">
 			<strong>How To</strong>
 			<br><br>
 			<ul class="list-group">
@@ -54,7 +54,7 @@
 				<li class="list-group-item">3. Choose and upload the Alligator-File (*.agt).</li>
 			</ul>
 		</div>
-		<div class="alert alert-info" style="margin:10px;">
+		<div id="info-div-sub3" class="alert alert-info" style="margin:10px;">
 			<strong>Credits</strong>
 			<br><br>
 			<ul class="list-group">
@@ -68,9 +68,9 @@
 		<fieldset>
 			<strong>Select the Output</strong>
 			<br><br>
-			<input type="radio" name="alligator" value="matrixdist" class="form-check-input"> show matrix of 3D distances<br>
+			<input type="radio" name="alligator" value="matrixdist" class="form-check-input" checked> show matrix of 3D distances<br>
 			<input type="radio" name="alligator" value="matrixallen" class="form-check-input"> show matrix of Allen intervals<br>
-			<input type="radio" name="alligator" value="timeline" class="form-check-input" checked> show virtual timeline<br>
+			<input type="radio" name="alligator" value="timeline" class="form-check-input"> show virtual timeline<br>
 			<input type="radio" name="alligator" value="graph" class="form-check-input"> show Allen interval graph<br>
 			<!--<input type="radio" name="alligator" value="turtlefile" class="form-check-input"> show the Allen RDF Graph<br>-->
 			<input type="radio" name="alligator" value="turtle" class="form-check-input"> show Allen TTL file<br>
@@ -79,12 +79,14 @@
 			<!--<input type="radio" name="alligator" value="amtrepo" class="form-check-input"> show a data in Academic Meta Tool (AMT) web viewer<br>-->
 		</fieldset>
 	</div>
-	<div id="upload-div" width="100%" class="alert alert-info" style="margin:10px;">
+	<div id="upload-div2" width="100%" class="alert alert-info" style="margin:10px;">
 		<strong>Upload your Alligator-File (*.agt)</strong>
 		<br><br>
 		<input type="file" name="File Upload" id="txtFileUpload" class="form-control-file" accept=".agt" />
 	</div>
-	<p>&nbsp;</p>
+	<div id="break-div" width="100%" style="margin:10px;">
+		<p>&nbsp;</p>
+	</div>
 	<div id="refresh-div" width="100%" class="alert alert-success" style="margin:10px;">
 		<center><button type="button" class="btn btn-success" onClick="location.href=location.href">go back</button></center>
 	</div>
