@@ -6,16 +6,14 @@
     <meta name="keywords" content="Allen,Linked Data" />
     <meta
       name="author"
-      content="Römisch-Germansiches Zentralmuseum, Florian Thiery"
-    />
+      content="Römisch-Germansiches Zentralmuseum, Florian Thiery" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alligator - An Allen Transformator</title>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    />
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" />
     <style>
       .alert {
         background-color: #4f628b !important;
@@ -56,14 +54,14 @@
       </div>
       <div id="header_pt2">
         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;<b
-          >RGZM.tools</b
+          >LEIZA.tools</b
         >
       </div>
       <div id="header_pt1_r">
         <i class="fa fa-envelope" aria-hidden="true"></i>
       </div>
       <!--<div id="header_pt2_r"><i class='fa fa-globe' aria-hidden='true'></i>&nbsp;English</div>-->
-      <div id="header_pt3_r">About RGZM Research Tools</div>
+      <div id="header_pt3_r">LEIZA Department of Scientific IT</div>
     </div>
     <div id="wrapper">
       <div id="content" class="content">
@@ -78,11 +76,17 @@
             <ul class="list-group">
               <li class="list-group-item">
                 Alligator reads a item name, its XYZ values of a CA, its start
-                and end date and the fact if it is fixed or not, example
+                and end date and the fact if it is fixed or not, all information
+                stored in a *.agt file. The format description can be found
+                <a
+                  href="https://leiza-rse.github.io/alligator-format/"
+                  target="_blank"
+                  >HERE</a
+                >, an example
                 <a
                   href="https://github.com/RGZM/alligator-format/blob/main/example/example_romanempire.agt"
                   target="_blank"
-                  >here (the linebreak MUST be CR+LF!)</a
+                  >HERE</a
                 >. Out of the CA 3D data all 3D distances are calculated. For
                 items which are not fixed (floating) the "next fixed neighbour"
                 (NFN) for start or end date will be searched. If the NFN is
@@ -146,8 +150,7 @@
           id="upload-div"
           width="100%"
           class="alert alert-info"
-          style="margin: 10px"
-        >
+          style="margin: 10px">
           <fieldset>
             <strong>Select the Output</strong>
             <br /><br />
@@ -156,51 +159,44 @@
               name="alligator"
               value="matrixdist"
               class="form-check-input"
-              checked
-            />
+              checked />
             show matrix of 3D distances<br />
             <input
               type="radio"
               name="alligator"
               value="matrixallen"
-              class="form-check-input"
-            />
+              class="form-check-input" />
             show matrix of Allen intervals<br />
             <input
               type="radio"
               name="alligator"
               value="timeline"
-              class="form-check-input"
-            />
+              class="form-check-input" />
             show virtual timeline<br />
             <input
               type="radio"
               name="alligator"
               value="graph"
-              class="form-check-input"
-            />
+              class="form-check-input" />
             show Allen interval graph<br />
             <!--<input type="radio" name="alligator" value="turtlefile" class="form-check-input"> show the Allen RDF Graph<br>-->
             <input
               type="radio"
               name="alligator"
               value="turtle"
-              class="form-check-input"
-            />
+              class="form-check-input" />
             show Allen TTL file<br />
             <input
               type="radio"
               name="alligator"
               value="cypher"
-              class="form-check-input"
-            />
+              class="form-check-input" />
             show Allen CYPHER file<br />
             <input
               type="radio"
               name="alligator"
               value="amt"
-              class="form-check-input"
-            />
+              class="form-check-input" />
             show a Academic Meta Tool (AMT) TTL file<br />
             <!--<input type="radio" name="alligator" value="amtrepo" class="form-check-input"> show a data in Academic Meta Tool (AMT) web viewer<br>-->
           </fieldset>
@@ -209,8 +205,7 @@
           id="upload-div2"
           width="100%"
           class="alert alert-info"
-          style="margin: 10px"
-        >
+          style="margin: 10px">
           <strong>Upload your Alligator-File (*.agt)</strong>
           <br /><br />
           <input
@@ -218,8 +213,7 @@
             name="File Upload"
             id="txtFileUpload"
             class="form-control-file"
-            accept=".agt"
-          />
+            accept=".agt" />
         </div>
         <div id="break-div" width="100%" style="margin: 10px">
           <p>&nbsp;</p>
@@ -228,14 +222,12 @@
           id="refresh-div"
           width="100%"
           class="alert alert-success"
-          style="margin: 10px"
-        >
+          style="margin: 10px">
           <center>
             <button
               type="button"
               class="btn btn-success"
-              onClick="location.href=location.href"
-            >
+              onClick="location.href=location.href">
               go back
             </button>
           </center>
@@ -244,8 +236,7 @@
           id="legend-div"
           width="100%"
           class="alert alert-success"
-          style="margin: 10px"
-        >
+          style="margin: 10px">
           <strong>legend for Allen interval relations</strong>
           <br /><br />
           <ul class="list-group">
@@ -264,22 +255,19 @@
           width="100%"
           style="border: 0px solid blue; padding: 10px; margin: 10px"
           class="alert"
-          style="color: black !important"
-        >
+          style="color: black !important">
           <div id="loading" style="text-align: center">
             here comes the content...
           </div>
           <div
             id="timeline-div"
             class="halign"
-            style="background-color: white !important"
-          ></div>
+            style="background-color: white !important"></div>
           <div
             id="legend2-div"
             width="100%"
             class="alert alert-success"
-            style="margin: 10px"
-          >
+            style="margin: 10px">
             <strong>legend for timeline items</strong>
             <br /><br />
             <ul class="list-group">
@@ -304,16 +292,14 @@
           <div
             id="rdffile-div"
             class="halign"
-            style="height: 800px !important"
-          ></div>
+            style="height: 800px !important"></div>
           <div id="cypherfile-div" class="halign"></div>
           <div id="amtfile-div" class="halign"></div>
           <div id="amtrepo-div" class="halign"></div>
           <div
             id="graph-div"
             class="halign"
-            style="background-color: #035353 !important"
-          ></div>
+            style="background-color: #035353 !important"></div>
           <div id="rdf-div" class="halign"></div>
         </div>
       </div>
@@ -321,17 +307,22 @@
         <center style="padding-top: 30px; font-size: 11px">
           <b
             ><a
+              class="footera"
               href="https://github.com/RGZM/alligator/blob/master/CITATION.cff"
               target="_blank"
               >MIT License</a
             >
-            | Römisch-Germanisches Zentralmuseum Leibniz-Forschungsinstitut für
-            Archäologie (2022) | Florian Thiery M.Sc., Dr. Allard W. Mees FSA</b
-          ><br /><a href="https://web.rgzm.de/ueber-uns/impressum/"
+            | Leibniz-Zentrum für Archäologie (LEIZA) 2022-2023 | Florian Thiery
+            M.Sc., Dr. Allard W. Mees FSA</b
+          ><br /><a
+            class="footera"
+            href="https://web.rgzm.de/ueber-uns/impressum/"
             >Impressum</a
           >
           |
-          <a href="https://web.rgzm.de/ueber-uns/datenschutzerklaerung/"
+          <a
+            class="footera"
+            href="https://web.rgzm.de/ueber-uns/datenschutzerklaerung/"
             >Datenschutz</a
           >
         </center>
@@ -341,8 +332,7 @@
   <!-- styles -->
   <link
     rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
-  />
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/style.min.css" />
   <link rel="stylesheet" href="css/app.css" />
   <link rel="stylesheet" href="codemirror/codemirror.css" />
@@ -350,8 +340,7 @@
   <link
     href="css/vis-timeline-graph2d.min.css"
     rel="stylesheet"
-    type="text/css"
-  />
+    type="text/css" />
   <!-- scripts -->
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.csv-0.71.min.js"></script>
