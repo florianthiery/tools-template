@@ -75,9 +75,8 @@
             <center><img src="alligator_logo_white.png" height="250" /></center>
             <ul class="list-group">
               <li class="list-group-item">
-                Alligator reads a item name, its XYZ values of a CA, its start
-                and end date and the fact if it is fixed or not, all information
-                stored in a *.agt file. The format description can be found
+                Alligator reads the following items from an *.agt file: item name, the resulting "XYZ values" of a Correspondence Analysis, the start
+                and end date and whether it is fixed or not. The *.agt format description can be found
                 <a
                   href="https://leiza-rse.github.io/alligator-format/"
                   target="_blank"
@@ -87,13 +86,13 @@
                   href="https://github.com/leiza-rse/alligator-format/blob/main/example/example_romanempire.agt"
                   target="_blank"
                   >HERE</a
-                >. Out of the CA 3D data all 3D distances are calculated. For
-                items which are not fixed (floating) the "next fixed neighbour"
+                >. Out of the first 3 dimensions of a Correspondence data, all 3D distances are calculated. For
+                items which are not fixed (floating), the "next fixed neighbour"
                 (NFN) for start or end date will be searched. If the NFN is
                 found, the virtual year will be taken. With this result and all
                 new calculated "virtual" years, all Allen time intervals will be
                 calculated. As a key feature, this calculation is downloadable
-                als Ressource Description Framework (RDF) file, following the
+                as a Ressource Description Framework (RDF) file, following the
                 alligator
                 <a
                   href="https://github.com/leiza-rse/alligator/blob/master/docs/vocab/alligator.rdf"
