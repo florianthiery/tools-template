@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var API_URL = "http://localhost:8080/alligator/rest/";
+  var API_URL = "https://api.leiza.de/alligator/rest/";
 
   // elements
   $("#matrix-div").hide();
