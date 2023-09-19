@@ -2,16 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Alligator - An Allen Transformator" />
-    <meta name="keywords" content="Allen,Linked Data" />
-    <meta name="author" content="LEIZA, Florian Thiery" />
+    <meta name="description" content="TITLE" />
+    <meta name="author" content="LEIZA" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alligator - An Allen Transformator</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title>TITLE</title>
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" />
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    />
     <style>
       .alert {
         background-color: #4f628b !important;
@@ -64,44 +63,26 @@
     <div id="wrapper">
       <div id="content" class="content">
         <center>
-          <h1 style="color: black">Alligator | An Allen Transformator</h1>
+          <h1 style="color: black">TITLE</h1>
         </center>
         <br />
         <div id="info-div" width="100%">
           <div id="info-div-sub1" class="alert alert-info" style="margin: 10px">
-            <strong>About Alligator</strong>
-            <center><img src="alligator_logo_white.png" height="250" /></center>
+            <strong>About TITLE</strong>
+            <center><img src="example.png" height="250" /></center>
+            <br />
             <ul class="list-group">
               <li class="list-group-item">
-                Alligator reads the following items from an *.agt file: item
-                name, the resulting "XYZ values" of a Correspondence Analysis,
-                the start and end date and whether it is fixed or not. The *.agt
-                format description can be found
-                <a
-                  href="https://leiza-rse.github.io/alligator-format/"
-                  target="_blank"
-                  >HERE</a
-                >
-                and an example is available
-                <a
-                  href="https://github.com/leiza-rse/alligator-format/blob/main/example/example_romanempire.agt"
-                  target="_blank"
-                  >HERE</a
-                >.
-                <br />
-                Out of the first 3 dimensions of a Correspondence data, all 3D
-                distances are calculated. For items which are not fixed
-                (floating), the "next fixed neighbour" (NFN) for start or end
-                date will be searched. If the NFN is found, the virtual year
-                will be taken. With this result and all new calculated "virtual"
-                years, all Allen time intervals will be calculated. As a key
-                feature, this calculation is downloadable as a Ressource
-                Description Framework (RDF) file, following the alligator
-                <a
-                  href="https://github.com/leiza-rse/alligator/blob/master/docs/vocab/alligator.rdf"
-                  target="_blank"
-                  >ontology</a
-                >.
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                sed diam voluptua. At vero eos et accusam et justo duo dolores
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+                est Lorem ipsum dolor sit amet.
               </li>
             </ul>
           </div>
@@ -129,208 +110,24 @@
               </li>
             </ul>
           </div>
-          <div id="info-div-sub2" class="alert alert-info" style="margin: 10px">
-            <strong>How To</strong>
-            <br /><br />
-            <ul class="list-group">
-              <li class="list-group-item">
-                1. Create a Alligator-File (*.agt). The format description can
-                be found
-                <a
-                  href="https://leiza-rse.github.io/alligator-format/"
-                  target="_blank"
-                  >HERE</a
-                >, an example
-                <a
-                  href="https://github.com/leiza-rse/alligator-format/blob/main/example/example_romanempire.agt"
-                  target="_blank"
-                  >HERE</a
-                >.
-              </li>
-              <li class="list-group-item">2. Select the output mode.</li>
-              <li class="list-group-item">
-                3. Choose and upload the Alligator-File (*.agt).
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          id="upload-div"
-          width="100%"
-          class="alert alert-info"
-          style="margin: 10px">
-          <fieldset>
-            <strong>Select the Output</strong>
-            <br /><br />
-            <input
-              type="radio"
-              name="alligator"
-              value="matrixdist"
-              class="form-check-input"
-              checked />
-            show matrix of 3D distances<br />
-            <input
-              type="radio"
-              name="alligator"
-              value="matrixallen"
-              class="form-check-input" />
-            show matrix of Allen intervals<br />
-            <input
-              type="radio"
-              name="alligator"
-              value="timeline"
-              class="form-check-input" />
-            show virtual timeline<br />
-            <input
-              type="radio"
-              name="alligator"
-              value="graph"
-              class="form-check-input" />
-            show Allen interval graph<br />
-            <!--<input type="radio" name="alligator" value="turtlefile" class="form-check-input"> show the Allen RDF Graph<br>-->
-            <input
-              type="radio"
-              name="alligator"
-              value="turtle"
-              class="form-check-input" />
-            show Allen TTL file<br />
-            <input
-              type="radio"
-              name="alligator"
-              value="cypher"
-              class="form-check-input" />
-            show Allen CYPHER file<br />
-            <input
-              type="radio"
-              name="alligator"
-              value="amt"
-              class="form-check-input" />
-            show a Academic Meta Tool (AMT) TTL file<br />
-            <!--<input type="radio" name="alligator" value="amtrepo" class="form-check-input"> show a data in Academic Meta Tool (AMT) web viewer<br>-->
-          </fieldset>
-        </div>
-        <div
-          id="upload-div2"
-          width="100%"
-          class="alert alert-info"
-          style="margin: 10px">
-          <strong>Upload your Alligator-File (*.agt)</strong>
-          <br /><br />
-          <input
-            type="file"
-            name="File Upload"
-            id="txtFileUpload"
-            class="form-control-file"
-            accept=".agt" />
-        </div>
-        <div id="break-div" width="100%" style="margin: 10px">
-          <p>&nbsp;</p>
-        </div>
-        <div
-          id="refresh-div"
-          width="100%"
-          class="alert alert-success"
-          style="margin: 10px">
-          <center>
-            <button
-              type="button"
-              class="btn btn-success"
-              onClick="location.href=location.href">
-              go back
-            </button>
-          </center>
-        </div>
-        <div
-          id="legend-div"
-          width="100%"
-          class="alert alert-success"
-          style="margin: 10px">
-          <strong>legend for Allen interval relations</strong>
-          <br /><br />
-          <ul class="list-group">
-            <li class="list-group-item" style="margin-bottom: 10px">
-              1 before( <) 2,> 1 after(>) 2, 1 meets(m) 2, 1 met-by(mi) 2, 1
-              overlaps(o) 2, 1 overlapped-by(oi) 2
-            </li>
-            <li class="list-group-item" style="margin-bottom: 10px">
-              1 starts(s) 2, >1 started-by(si) 2, 1 finishes(f) 2, 1
-              finished-by(f) 2, 1 during(d) 2, 1 contains(di) 2, 1 equals(=) 2
-            </li>
-          </ul>
-        </div>
-        <div
-          id="wrapper-div"
-          width="100%"
-          style="border: 0px solid blue; padding: 10px; margin: 10px"
-          class="alert"
-          style="color: black !important">
-          <div id="loading" style="text-align: center">
-            here comes the content...
-          </div>
-          <div
-            id="timeline-div"
-            class="halign"
-            style="background-color: white !important"></div>
-          <div
-            id="legend2-div"
-            width="100%"
-            class="alert alert-success"
-            style="margin: 10px">
-            <strong>legend for timeline items</strong>
-            <br /><br />
-            <ul class="list-group">
-              <li class="list-group-item blue" style="margin-bottom: 10px">
-                fixed
-              </li>
-              <li class="list-group-item orange" style="margin-bottom: 10px">
-                floating --> nextFixedNeighbour(start), nextFixedNeighbour(end)
-                * value was fixed
-              </li>
-              <li class="list-group-item red" style="margin-bottom: 10px">
-                error (end starts before start exists)
-              </li>
-            </ul>
-          </div>
-          <div id="matrix-div" class="halign">
-            <table id="matrixtable"></table>
-          </div>
-          <div id="matrix-div2" class="halign">
-            <table id="matrixtable2"></table>
-          </div>
-          <div
-            id="rdffile-div"
-            class="halign"
-            style="height: 800px !important"></div>
-          <div id="cypherfile-div" class="halign"></div>
-          <div id="amtfile-div" class="halign"></div>
-          <div id="amtrepo-div" class="halign"></div>
-          <div
-            id="graph-div"
-            class="halign"
-            style="background-color: #035353 !important"></div>
-          <div id="rdf-div" class="halign"></div>
-        </div>
+          
+        
+        
       </div>
       <div id="footer">
         <center style="padding-top: 30px; font-size: 11px">
           <b
-            ><a
-              class="footera"
-              href="https://github.com/leiza-rse/alligator/blob/master/CITATION.cff"
-              target="_blank"
-              >MIT License</a
-            >
-            | Leibniz-Zentrum für Archäologie (LEIZA) 2022-2023 | Florian Thiery
-            M.Sc., Dr. Allard W. Mees FSA</b
+            >Lizenz
+            | Leibniz-Zentrum für Archäologie (LEIZA) 2023 | NAME</b
           ><br /><a
             class="footera"
-            href="https://web.rgzm.de/ueber-uns/impressum/"
+            href="https://www.leiza.de/impressum"
             >Impressum</a
           >
           |
           <a
             class="footera"
-            href="https://web.rgzm.de/ueber-uns/datenschutzerklaerung/"
+            href="https://www.leiza.de/datenschutz"
             >Datenschutz</a
           >
         </center>
@@ -340,21 +137,12 @@
   <!-- styles -->
   <link
     rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+  />
   <link rel="stylesheet" href="css/style.min.css" />
   <link rel="stylesheet" href="css/app.css" />
-  <link rel="stylesheet" href="codemirror/codemirror.css" />
-  <link rel="stylesheet" href="codemirror/darcula.css" />
-  <link
-    href="css/vis-timeline-graph2d.min.css"
-    rel="stylesheet"
-    type="text/css" />
   <!-- scripts -->
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.csv-0.71.min.js"></script>
-  <script src="codemirror/codemirror.js"></script>
-  <script src="codemirror/turtle.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <script src="js/vis.js"></script>
-  <script src="js/app.js"></script>
 </html>
